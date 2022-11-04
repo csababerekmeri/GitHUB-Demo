@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text area</title>
+</head>
+<body>
+    <form>
+
+        <!--
+        HTML Forms <label>:
+    
+        - Defines a label for form elements.
+        - The "for" attribute should match the "id" attribute of the relevant <input> element to bind them together.
+
+        List of form label types:
+
+        - https://www.w3schools.com/tags/tag_label.asp
+         -->
+        <label for="firstName">First Name:</label>
+
+
+        <!--
+        HTML Forms <input>:
+    
+        - The <input> element takes in a "type" attribute which determines how it is used and displayed.
+        - The below example using "text" provides a text input field.
+        - Other examples of <input> types are: "radio" for a radio button, "submit" for a submit button, "checkbox" for a checkbox and "button" for a standard button.
+
+        List of form input types: 
+
+        - https://www.w3schools.com/html/html_form_input_types.asp
+
+        The "id" attribute is a unique identifier of the HTML element. Must beegin with a letter. Referenced in CSS and JS.
+        The "name" attribute names the HTML element and unlike an "id" does not have to be unique. Referenced in JS but NOT CSS.
+         -->
+        <input id="firstName" type="text"><br><br>
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" type="text">
+    </form>
+
+    <h2>Login Form</h2>
+    <!-- The "action" attribute determines what takes place upon the form being submitted. -->
+    <form action="./confirmation.html">
+        <label for="userName">Username:</label>
+        <input id="userName" type="text"><br><br>
+        <label for="passwordField">Password:</label>
+        <input id="passwordField" type="password">
+        <!-- If an input element has the type of submit. It works as a button to submit the form -->
+        <input type="submit" value="Log-in">
+    </form>
+
+    <h2>Datalist Example</h2>
+    <form>
+        <label for="colourChoice">Choose a Colour:</label>
+        <input list="colours" id="colourChoice">
+        <datalist id="colours">
+            <option value="Blue">
+            <option value="Red">
+            <option value="Green">
+            <option value="Yellow">
+        </datalist>
+    </form>
+
+    <h2>Fieldset Example</h2>
+    <form action="./confirmation.html">
+        <fieldset>
+            <legend>Personal Details:</legend>
+            <label for="fName">First Name:</label>
+            <textarea id="information" cols="4" rows="8"></textarea>
+    
+            <input id="fName" type="text"><br><br>
+            <label for="lName">Last Name:</label>
+            <input id="lName" type="text"><br><br>
+            <label for="email">Email:</label>
+            <input id="email" type="email"><br><br>
+            <label for="birthday">DOB:</label>
+            <input id="birthday" type="date"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    
+</body>
+</html>
